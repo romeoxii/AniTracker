@@ -42,10 +42,10 @@ onMounted(() => {
       </header>
 
       <section class="w-full flex items-center justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           <!-- Recommendations card -->
           <div
-            class="md:w-[500px] lg:w-[300px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
+            class="sm:w-[350px] lg:w-[320px] xl:w-[400px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
           >
             <div class="p-4 flex flex-col items-center space-y-3">
               <div class="flex items-center justify-center">
@@ -60,7 +60,7 @@ onMounted(() => {
           </div>
           <!-- Track card -->
           <div
-            class="md:w-[500px] lg:w-[300px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
+            class="sm:w-[350px] lg:w-[320px] xl:w-[400px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
           >
             <div class="p-4 flex flex-col items-center space-y-3">
               <div class="flex items-center justify-center">
@@ -75,7 +75,7 @@ onMounted(() => {
           </div>
           <!-- Customize card -->
           <div
-            class="md:w-[500px] lg:w-[300px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
+            class="sm:w-[350px] lg:w-[320px] xl:w-[400px] w-full px-6 md:py-20 py-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-3 cards rounded-3xl"
           >
             <div class="p-4 flex flex-col items-center space-y-3 mb-10">
               <div class="flex items-center justify-center">
