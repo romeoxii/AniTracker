@@ -3,14 +3,13 @@ import { useRoute } from 'vue-router'
 import { ref, onMounted } from 'vue'
 import {
   fetchAnimeDetails,
-  fetchAniListBanner,
   animeDetails,
   recommendations,
   recommendationsById,
 } from '../services/detailsServices'
 
 const route = useRoute()
-const banner = ref('')
+// const banner = ref('')
 
 const summary = ref(false)
 const isShown = ref(false)
@@ -22,13 +21,13 @@ const isSummary = () => {
 
 onMounted(() => {
   fetchAnimeDetails(route.params.id)
-  fetchAniListBanner(route.params.id)
+  // fetchAniListBanner(route.params.id)
   recommendationsById(route.params.id)
 })
 
-onMounted(async () => {
-  banner.value = await fetchAniListBanner(Number(route.params.id))
-})
+// onMounted(async () => {
+//   banner.value = await fetchAniListBanner(Number(route.params.id))
+// })
 </script>
 
 <template>
@@ -36,7 +35,7 @@ onMounted(async () => {
     <div class="flex flex-col justify-center">
       <div class="md:h-[320px] h-[270px] w-full relative">
         <div class="h-full w-full bg-black/50 inset-0 absolute"></div>
-        <img :src="banner || animeDetails.poster" alt="anime poster" class="h-full w-full" />
+        <img :src="animeDetails.poster" alt="anime poster" class="h-full w-full" />
 
         <div
           class="absolute inset-0 left-1 top-1/5 lg:hidden flex flex-col justify-center items-center space-y-1 h-[170px] z-20"

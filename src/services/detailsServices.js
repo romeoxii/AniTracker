@@ -48,26 +48,26 @@ export const fetchAnimeDetails = async (id) => {
   }
 }
 
-export const fetchAniListBanner = async (mal_id) => {
-  const query = `
-    query ($idMal: Int) {
-      Media(idMal: $idMal, type: ANIME) {
-        bannerImage
-      }
-    }
-  `
+// export const fetchAniListBanner = async (mal_id) => {
+//   const query = `
+//     query ($idMal: Int) {
+//       Media(idMal: $idMal, type: ANIME) {
+//         bannerImage
+//       }
+//     }
+//   `
 
-  const variables = { idMal: mal_id }
+//   const variables = { idMal: mal_id }
 
-  const response = await fetch('/anilist', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query, variables }),
-  })
+//   const response = await fetch('/anilist', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({ query, variables }),
+//   })
 
-  const { data } = await response.json()
-  return data.Media.bannerImage
-}
+//   const { data } = await response.json()
+//   return data.Media.bannerImage
+// }
 
 export const recommendations = ref([])
 export const recommendationsById = async (id) => {
